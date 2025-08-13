@@ -134,8 +134,10 @@ def dnn_est(train_data, val_data, test_data, Theta, eta, n_layer, n_node, n_lr, 
         'f_C_val': f_X_C_val.detach().numpy(),
         'f_test': f_X_test.detach().numpy(),
         'g_test': g_X_test.detach().numpy(),
-        'f_C_test': f_X_C_test.detach().numpy()
+        'f_C_test': f_X_C_test.detach().numpy(),
+        'model': model
     }
+
 
 
 
