@@ -15,6 +15,10 @@ by seq (initial=0.01).
 
 The code requires Python version>=3.13.2, Numpy >=2.2.4, Pytorch>=2.7.0 and Scipy>=1.15.2. 
 
+Copyright © 2025 Q. Huang. All rights reserved. 
+
+13/08/2025, HungHom, Kowloon, HongKong, China.
+
 
 
 
