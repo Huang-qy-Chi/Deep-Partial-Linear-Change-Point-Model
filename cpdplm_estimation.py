@@ -31,6 +31,8 @@ def CPDPLM(train_data,val_data,test_data,Theta0, eta0,\
         f_C_test = dnn_res['f_C_test']
         val_loss = dnn_res['Val_loss']
         maxepoch = dnn_res['Early_stop']
+        model = dnn_res['model']    
+            
 
         # Parameter estimation
         Theta = Theta_est(Y_train, A_train, Z_train, f_train, g_train, eta0)
@@ -59,9 +61,10 @@ def CPDPLM(train_data,val_data,test_data,Theta0, eta0,\
         'g_val': g_val,
         'f_C_val': f_C_val,
         'val_loss': val_loss,
-        'val_loss': val_loss,
+        'model': model,
         'maxepoch': maxepoch
     }
+
 
 
 
