@@ -9,6 +9,22 @@ def uniform_data(n, u1, u2):
     return b
 
 def generate_case_Deep(n, corr, Theta, eta):
+    """
+    This function generates data.
+    Input:
+        n: sample size,
+        corr: correlation between X,
+        Theta: true value of parameter (beta, gamma),
+        eta: true value of change point;
+    Output: 
+        Y: response, 
+        A: treatment,
+        X: nuisance covariate,
+        Z: change-point covariate,
+        f_X: true value of f(X),
+        g_X: true value of g(X),
+        f_X_C: true value of f(X)_g(X)I(Z>eta).
+    """    
     #parametric A
     A = ndm.binomial(1, 0.5, n) 
     #change point Z
@@ -53,6 +69,7 @@ def generate_case_Deep(n, corr, Theta, eta):
         'f_X_C': np.array(f_X_C, dtype='float32'),
         'Z': np.array(Z, dtype = 'float32')
     }
+
 
 
 
