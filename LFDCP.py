@@ -8,6 +8,10 @@ import numpy as np
 # simultaneously read the a_b
 def LFDCP(A1_train, A1_val, train_data,val_data,Theta,eta,f_C_train, f_C_val,\
           n_layer,n_node,n_lr,n_epoch,patiences=10,show_val = True):
+    """
+    This function outputs the least favorite direction to construct 
+    the information matrix and calculate the SE of beta and gamma.
+    """
     if show_val == True:
         print('DNN_iteration')
     
@@ -115,6 +119,7 @@ def LFDCP(A1_train, A1_val, train_data,val_data,Theta,eta,f_C_train, f_C_val,\
 
     return a_train.detach().numpy()
     
+
 
 
 
