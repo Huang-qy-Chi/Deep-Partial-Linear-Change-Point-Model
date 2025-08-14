@@ -11,7 +11,7 @@ where:
 An additional impact $A_i^\top\gamma+g(X_i)$ will occur if the $i$ th observation satisfies $Z_i>\eta$, where $\eta\in (\min(Z),\max(Z))$ 
 is an unknown threshold.
 The function inputs data $(Y_i,A_i,X_i,Z_i)$ and output the estimation of the parameter $(\beta,\gamma)$, the change-point
-$\eta$ and the estimation of two functions $(f,g)$ via deep nerual network. 
+$\eta$ and the estimation of two functions $(f,g)$ via a profile estimation procedure. 
 
 Readers can attach to the file $\textsf{example.ipynb}$, which automatically imports functions in $\textbf{\textsf{.py}}$, and it reports:
 1. the bias, SSE, ESE and CP (close to 0.95) of $(\beta,\gamma)$,
