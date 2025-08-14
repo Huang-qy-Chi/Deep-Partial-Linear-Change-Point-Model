@@ -5,8 +5,6 @@ def eta_est(Y, A, Z, f_X, g_X, Theta, seq = 0.01):
     #establish the grid of zeta
     Z_min = np.min(Z)
     Z_max = np.max(Z)
-    #num = np.floor((Z_max-Z_min)/seq)
-    #np.arange(0, 3, 0.1)
     zeta_grid = np.arange(Z_min, Z_max, seq)  #the search grid
 
     #define the least square loss
@@ -24,6 +22,7 @@ def eta_est(Y, A, Z, f_X, g_X, Theta, seq = 0.01):
     zeta_est = zeta_grid[loc]
     zeta_est = zeta_est.astype(np.float32)
     return zeta_est
+
 
 
 
