@@ -13,7 +13,7 @@ is an unknown threshold.
 The function inputs data $(Y_i,A_i,X_i,Z_i)$ and output the estimation of the parameter $(\beta,\gamma)$, the change-point
 $\eta$ and the estimation of two functions $(f,g)$ via deep nerual network. 
 
-Readers can attach to the file $\textsf{example_deep.ipynb}$, which automatically imports functions in $\textbf{\textsf{.py}}$, and it reports:
+Readers can attach to the file $\textsf{example.ipynb}$, which automatically imports functions in $\textbf{\textsf{.py}}$, and it reports:
 1. the bias, SSE, ESE and CP (close to 0.95) of $(\beta,\gamma)$,
 2. the bias of $\eta$,
 3. the relative error (RE) of $(f,g)$ on test data.
