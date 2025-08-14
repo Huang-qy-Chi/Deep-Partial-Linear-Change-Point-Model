@@ -1,7 +1,5 @@
 import numpy as np
 
-        
-
 #%% ---------------------------change point est by grid search--------------------------
 def eta_est(Y, A, Z, f_X, g_X, Theta, seq = 0.01):
     #establish the grid of zeta
@@ -11,7 +9,7 @@ def eta_est(Y, A, Z, f_X, g_X, Theta, seq = 0.01):
     #np.arange(0, 3, 0.1)
     zeta_grid = np.arange(Z_min, Z_max, seq)  #the search grid
 
-    #define the log-likelihood loss
+    #define the least square loss
     def BZ2(*args):
         ZC = np.vstack((A,A*(Z>args[0])))
         loss_total = Y-ZC.T @ Theta - f_X - g_X*(Z>args[0])
@@ -26,6 +24,7 @@ def eta_est(Y, A, Z, f_X, g_X, Theta, seq = 0.01):
     zeta_est = zeta_grid[loc]
     zeta_est = zeta_est.astype(np.float32)
     return zeta_est
+
 
 
 
