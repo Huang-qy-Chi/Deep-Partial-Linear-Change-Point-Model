@@ -1,4 +1,4 @@
-# Deep-Partial-Linear-Change-Point-Model
+# Deep Partially Linear Change-Point Regression
 This code mainly focuses on estimating a partial linear model with a change point:
 $$Y=A^\top\beta+f(X)+(A^\top\gamma+g(X))I(Z>\eta)+\epsilon,$$
 where: 
