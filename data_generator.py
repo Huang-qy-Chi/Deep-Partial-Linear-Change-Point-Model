@@ -23,9 +23,9 @@ def generate_case_Deep(n, corr, Theta, eta):
         Z: change-point covariate,
         f_X: true value of f(X),
         g_X: true value of g(X),
-        f_X_C: true value of f(X)_g(X)I(Z>eta).
+        f_X_C: true value of f(X)+g(X)I(Z>eta).
     """    
-    #parametric A
+    #parametric A (p=1 as an example)
     A = ndm.binomial(1, 0.5, n) 
     #change point Z
     Z = ndm.normal(loc=2, scale=1, size=n) 
@@ -33,7 +33,7 @@ def generate_case_Deep(n, corr, Theta, eta):
     AC = np.vstack((A, A*(Z>eta)))
     AC = AC.T
 
-    #nonparametric X
+    #nonparametric X (r=5, classical nonparametric methods may fail)
     mean = np.zeros(5)
     cov = np.identity(5)*(1-corr) + np.ones((5, 5))*corr
     def multivariatet(mu,Sigma,N,M):
@@ -42,7 +42,7 @@ def generate_case_Deep(n, corr, Theta, eta):
         Z = np.random.multivariate_normal(np.zeros(d),Sigma,M)
         return mu + Z/np.sqrt(g/N)
     X = multivariatet(mean,cov,5,n)
-    X = np.clip(X, 0, 2) #t-distributed with [0,2]
+    X = np.clip(X, 0, 2) #t-distributed truncated on [0,2]
 
     #DNN function f and g
     f_X = np.sqrt(X[:,0]*X[:,1])/5 + X[:,2]**2*X[:,3]/4 \
@@ -69,6 +69,7 @@ def generate_case_Deep(n, corr, Theta, eta):
         'f_X_C': np.array(f_X_C, dtype='float32'),
         'Z': np.array(Z, dtype = 'float32')
     }
+
 
 
 
