@@ -22,7 +22,7 @@ To avoid overfitting, the hyperparameters n_lr (learning rate), n_node (width), 
 and patiences (when to early stop) need to be adjusted, and the grid for $\eta$ grid search can be adjusted 
 by seq (initial=0.01).
 
-The code requires Python version>=3.13.2, Numpy >=2.2.4, Pytorch>=2.7.0 and Scipy>=1.15.2. 
+The code recommends Python version>=3.13.2, Numpy >=2.2.4, Pytorch>=2.7.0 and Scipy>=1.15.2. 
 
 Copyright © 2025 Q. Huang. All rights reserved. 
 
