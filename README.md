@@ -8,7 +8,7 @@ where:
 4. $I(\cdot)$ means the indicator function, $f,g: R^r\to R$ are multivariate functions $(usually \ r\geq 3)$,
 5.  $Z\in R$ represents the change-point covariate.
 
-An additional impact $A_i^\top\gamma+g(X_i)$ will occur if the $i$ th observation satisfies $Z_i>\eta$, where $\eta\in R$ 
+An additional impact $A_i^\top\gamma+g(X_i)$ will occur if the $i$ th observation satisfies $Z_i>\eta$, where $\eta\in (\min(Z),\max(Z))$ 
 is an unknown threshold.
 The function inputs data $(Y_i,A_i,X_i,Z_i)$ and output the estimation of the parameter $(\beta,\gamma)$, the change-point
 $\eta$ and the estimation of two functions $(f,g)$ via deep nerual network. 
