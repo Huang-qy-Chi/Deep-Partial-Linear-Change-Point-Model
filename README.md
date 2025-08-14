@@ -26,7 +26,7 @@ The code requires Python version>=3.13.2, Numpy >=2.2.4, Pytorch>=2.7.0 and Scip
 
 Copyright © 2025 Q. Huang. All rights reserved. 
 
-13/08/2025, HungHom, Kowloon, HongKong, China.
+13/08/2025, Hung Hom, Kowloon, Hong Kong, China.
 
 
 
